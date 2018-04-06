@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.nonsobiose.medic.AddMedicationActivity">
+
+    <TextView
+        android:id="@+id/textView_medication_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medication Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_medication_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="Enter your med name "
+        android:inputType="textCapSentences|textAutoCorrect|textAutoComplete|textPersonName"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView_medication_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_medication_name" />
+
+    <TextView
+        android:id="@+id/textView_medication_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Medication Description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_medication_name" />
+
+    <EditText
+        android:id="@+id/editText_medication_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="Enter a med description"
+        android:inputType="textPersonName"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_medication_description" />
+
+
+
+    <TextView
+        android:id="@+id/textView_medication_interval_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Medication Interval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_medication_description" />
+
+    <EditText
+        android:id="@+id/editText_medication_interval_number"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:hint="Enter interval"
+        android:inputType="number"
+        android:padding="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_medication_interval_display" />
+
+    <Spinner
+        android:id="@+id/spinner_medication_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:entries="@array/medication_interval"
+        app:layout_constraintBottom_toTopOf="@+id/editText_medication_interval_number"
+        app:layout_constraintStart_toEndOf="@+id/editText_medication_interval_number"
+        app:layout_constraintTop_toBottomOf="@+id/editText_medication_interval_number" />
+
+    <Button
+        android:id="@+id/button_medication_start_date"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/date_background"
+        android:text="Start Date"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_medication_duration" />
+
+    <TextView
+        android:id="@+id/textView_medication_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Medication Duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_medication_interval_number" />
+
+    <Button
+        android:id="@+id/button_medication_end_date"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/date_background"
+        android:text="End Date"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/button_medication_start_date"
+        app:layout_constraintTop_toBottomOf="@+id/textView_medication_duration" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_medication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+
+</android.support.constraint.ConstraintLayout>

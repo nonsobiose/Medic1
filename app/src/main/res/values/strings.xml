@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Medic</string>
+    <string name="add_med">Add Medication</string>
+    <string name="view_med">View Medication</string>
+
+    <string-array name="medication_interval">
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+    </string-array>
+</resources>
